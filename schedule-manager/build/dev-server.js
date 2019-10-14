@@ -52,9 +52,14 @@ compiler.plugin('compilation', function (compilation) {
 
 var context = config.dev.context
 
+var proxypath = 'http://127.0.0.1:9001';
+
 switch(process.env.NODE_ENV){
-    case 'local': var proxypath = 'http://localhost:8001'; break;
-    case 'online': var proxypath = 'http://elm.cangdu.org'; break;
+    //本地开发
+    case 'dev': proxypath = 'http://127.0.0.1:9001'; break;
+    //测试环境  stable
+    case 'stable': proxypath = 'http://127.0.0.1:9001'; break;
+    // case 'online': var proxypath = 'http://elm.cangdu.org'; break;
 }
 var options = {
     target: proxypath,
