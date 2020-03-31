@@ -56,7 +56,7 @@ var proxypath = 'http://127.0.0.1:9001';
 
 switch(process.env.NODE_ENV){
     //本地开发
-    case 'dev': proxypath = 'http://127.0.0.1:9001'; break;
+    case 'dev': proxypath = 'http://127.0.0.1:8094'; break;
     //测试环境  stable
     case 'stable': proxypath = 'http://127.0.0.1:9001'; break;
     // case 'online': var proxypath = 'http://elm.cangdu.org'; break;
